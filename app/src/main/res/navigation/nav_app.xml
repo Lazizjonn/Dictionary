@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.dictionary_slp.presenter.ui.screen.HomeScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_home" />
+    <fragment
+        android:id="@+id/favouriteScreen"
+        android:name="uz.gita.dictionary_slp.presenter.ui.screen.FavouriteScreen"
+        android:label="favourite_screen"
+        tools:layout="@layout/screen_favourite" />
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="uz.gita.dictionary_slp.presenter.ui.screen.HostFragment"
+        android:label="fragment_host"
+        tools:layout="@layout/fragment_host" />
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.dictionary_slp.presenter.ui.screen.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_hostFragment"
+            app:destination="@id/hostFragment"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
